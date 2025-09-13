@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercice 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="style.css">
+    
+    
+
+</head>
+<body>
+
+    <!-- header-->
+
+    <header class="header">
+        <div class="pconteiner">
+            <a href="index.html"><p class="pheader" > TP3 : JavaScript </p></a>
+        </div>
+        
+    </header>
+
+    <section class="section1">
+    <!-- exercice 1 -->
+    <div class="exerxice1">
+
+
+        <h1 class="h1">Exercice 1 </h1>
+        <br>
+        <h2 class="h2">1) Somme de deux nombres</h2>
+        <div class="question1">
+
+            <p class="pquestion1 label" >Donner deux nombre : 
+                <input  type="number" name="num1" id="one" placeholder="Numéro 1">
+                <input type="number" name="num2" id="two" placeholder="Numéro 2">
+                <input type="button" value="Calculer" id="buttonsomme" onclick="add()"></input>
+            </p>
+
+            <br>
+
+            <p class="sommeadd">Somme : <p  class="somme" id="somme" > </p></p>
+            
+            
+
+        </div>
+
+        <br><br><br><br><hr>
+
+        <!-- 2)-->
+
+        <h2 class="h2">2) Convertiseur en secondes</h2>
+        <div class="question2">
+            <div id="minute">
+              <label  class="label">Nombre  de minutes : <input type="number" id="inputnumber1" min="1" placeholder="Minutes"></label>
+              <input type="button" value="Convertir" id="btminconvertir" onclick="minute()" >
+              <br>
+              <label class="label">Resultat : <span id="minuteresult"></span></label>
+            </div>
+
+            <br>
+
+            <div id="heure">
+                <label  class="label">Nombre  de heures : <input type="number" id="inputnumber2" min="1" placeholder="Heures"></label>
+                <input type="button" value="Convertir" id="bthrconvertir" onclick="heure()">
+                <br>
+                <label class="label">Resultat : <span id="heureresult"></span></label>
+
+            </div>
+
+            <br>
+            <div id="minuteEtheure">
+                <label  class="label">Deux entiers (heures, minutes): <input type="number" id="inputnumber3"  placeholder="Heures" min="0" value="0"> <input type="number" id="inputnumber4"  placeholder="Minutes" min="0" value="0"> </label>
+                <input type="button" value="Convertir" id="btallconvertir" onclick="temp()">
+                <br>
+                <label class="label">Resultat : <span id="allresult"></span></label>
+
+            </div>
+
+        </div>
+
+        <br><br><br><br><hr>
+
+
+
+        <!--3)-->
+
+        <h2 class="h2">3) Surface d’un triangle </h2>
+        <div class="question3">
+            <div class="surface">
+                <label class="label">Donner : <input type="number" id="base" placeholder="Base" min="0"> <input type="number"  id="hauteur" placeholder="hauteur" min="0"> </label>
+                <input type="button" id="btsurface" value="calculer" onclick="surface()">
+                <br>
+                <label class="label">Surface triangle : <span id="surfaceresult"></span></label>
+
+                
+            </div>
+        </div>
+
+
+        <br><br><br><br><hr>
+
+        <!--4)-->
+
+        <h2 class="h2">4) L'inverse d'une chaîne de caractères</h2>
+        <div class="question4">
+            <label class="label">Donner une chaîne de caractères : <input type="text" id="chaine"></label>
+            <input type="button" name="inverse" id="btinverse" value="inverser" onclick="inverse()">
+            <br>
+            <label class="label">Résultat : <span id="chaineinverse"></span></label>
+
+        </div>
+
+
+        <br><br><br><br><hr>
+
+
+        <!--5)-->
+
+        <h2 class="h2">5) L'inverse d'un tableau</h2>
+        <div class="question5">
+            <label class="label">Donner un tableau : <input type="text" name="" id="tableau"> </label>
+            <input type="button" value="inverser le tableau" id="btinversetableau" onclick="inverserTableau()">
+            <br>
+             <span id="invtableau"></span>
+
+        </div>
+
+        <br><br><br><br><hr>
+
+        <!--6)-->
+
+        <h2 class="h2">6) le plus grand des trois entiers donnés</h2>
+        <div class="question6">
+            
+             <label  class="label" for="nombre1">Entrez le premier entier  :</label>
+             <input type="number" id="nombre1" />
+             <br>
+             <label  class="label" for="nombre2">Entrez le deuxième entier :</label>
+             <input type="number" id="nombre2" />
+             <br>
+             <label class="label"  for="nombre3">Entrez le troisième entier :</label>
+             <input type="number" id="nombre3" />
+             <br><br>
+             <button onclick="trouverPlusGrand()" id="btplusgrand">Trouver le plus grand</button>
+             <span id=""></span>
+
+
+        </div>
+       </div>
+
+       <br><br><br><br><hr>
+
+       <!--7)-->
+        <h2 class="h2">7)  Reste de la Division</h2>
+        <div class="question7">
+         <!-- Champs de texte pour entrer les deux nombres -->
+         <label class="label" for="nombre1">Entrez le premier nombre :</label>
+         <input type="number" id="div1" />
+      <br>
+      <label class="label" for="nombre2">Entrez le deuxième nombre :</label>
+      <input type="number" id="div2" />
+      <br>
+      <!-- Bouton pour calculer le reste de la division -->
+      <button onclick="calculerReste()" id="btcalculereste">Calculer le reste </button>
+
+      <!-- Afficher le résultat -->
+     <span id="restediv"></span>
+        </div>
+        <br>
+    
+
+        <br><br><br><br><hr>
+
+        <!--8)-->
+        <h2 class="h2">8) Vérifier si un Nombre est Pair ou Impair </h2>
+        <div class="question8">
+        <label class="label" for="nombre">Entrez un nombre :</label>
+      <input type="number" id="input8" />
+      <button onclick="verifierPairImpair()" id="btverifier">Vérifier</button>
+      <span id="pairouimpair"></span>
+
+        </div>
+
+
+        <br><br><br><br><hr>
+
+         <!--9)-->
+         <h2 class="h2">9) Représenter une personne </h2>
+         <div class="question9">
+                <ul class="label">
+                    <li>Nom :   <input type="text" name="" id="Nom"></li>
+                    <li>Age :  <input type="number" name="" id="Age"></li>
+                    <li>Adresse : <input type="text" name="" id="Adresse"></li>
+                </ul>
+                <input type="button" value="Genérer" id="btgenerer" onclick="formatPrs()">
+                <span id="Generer"></span>
+     
+         </div>
+
+    </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ <script src="main.js">
+
+ </script>
+
+    
+</body>
+</html>
+
+
+
+
+
